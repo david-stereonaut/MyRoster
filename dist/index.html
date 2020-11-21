@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Life+Savers:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="head-container">
+        <input type="text" placeholder="Team name goes here">
+        <button type="button" id="get-roster">Get Roster</button>
+        <button type="button" id="dream-team">Dream Team</button>
+    </div>
+    <div id="results-container">
+    </div>
+
+    <script id="results-template" type="text/x-handlebars-template">
+        {{#each this}}
+        <div class="player">
+            <p>{{firstName}} {{lastName}}</p>
+            <p>{{jersey}}</p>
+            <img src="{{img}}" onerror="this.onerror=null;this.src='https://media.tenor.com/images/9c28ad2af5f5ee4463bc4b9ac230dec6/tenor.gif';this.style='width:20vw';">
+            <p>{{pos}}</p>
+            <button class="addDream">Add to Dream Team</button>
+        </div>
+        {{/each}}
+    </script>
+    <script id="stats-template" type="text/x-handlebars-template">
+        <div class="stats">
+            {{#each this}}
+            <p>{{key}}: {{value}}</p>
+            {{/each}}
+        </div>
+    </script>
+    <script src="/jquery/dist/jquery.js"></script>
+    <script src="/handlebars/dist/handlebars.js"></script>
+    <script src="render.js"></script>
+    <script src="logic.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
