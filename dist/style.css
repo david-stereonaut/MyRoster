@@ -1,0 +1,49 @@
+#head-container {
+    height: 5vh;
+    background-color: #e5e5e5;
+    display: grid;
+    grid-template-columns: 6fr 1fr 1fr;
+    border: 1vh solid #0f4c5c;
+    padding: 1vh;
+}
+
+#head-container > * {
+    font-family: 'Life Savers', cursive;
+    font-size: large;
+}
+
+#results-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.player {
+    background-color: #fb8500;
+    border: 1vh solid #ffb703;
+    margin: 1vh;
+    justify-content: center;
+    text-align: center;
+    display: grid;
+    box-shadow: 2px 2px 2px gray;
+}
+
+img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px gray;
+    width: 25vw;
+    background-color: #e5e5e5;
+}
+
+p {
+    margin: 0;
+    font-family: 'Staatliches', cursive;
+}
+
+.stats {
+    width: 25vw;
+    position: absolute;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: gray;
+}
